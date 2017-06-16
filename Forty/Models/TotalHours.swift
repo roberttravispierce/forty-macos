@@ -12,7 +12,7 @@ struct TotalHours {
         return totalHours.asString
     }
 
-    static func weekly(totalStrings: [String]) -> String {
-        return totalStrings.map(Hours.init).reduce(Hours.zero, +).asString
+    static func weekly(dailyTotals: [String]) -> String {
+        return dailyTotals.map(Hours.init).reduce(Hours.zero, +).asString
     }
 }

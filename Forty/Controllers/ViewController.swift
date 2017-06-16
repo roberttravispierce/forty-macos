@@ -61,7 +61,7 @@ class ViewController: NSViewController {
         dayStack.totalTextField.stringValue = dailyTotal
 
         let totalStrings: [String] = dayStacks.flatMap { $0.totalTextField.stringValue }
-        let grandTotal = TotalHours.weekly(totalStrings: totalStrings)
+        let grandTotal = TotalHours.weekly(dailyTotals: totalStrings)
         grandTotalTextField.stringValue = grandTotal
     }
 
