@@ -15,7 +15,7 @@
 		FC725F971EF463EC009F8C86 /* TotalHoursTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC725F961EF463EC009F8C86 /* TotalHoursTests.swift */; };
 		FC725F991EF46463009F8C86 /* WorkWeekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC725F981EF46463009F8C86 /* WorkWeekTests.swift */; };
 		FCABFF6A1EE72B9700AD314D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABFF691EE72B9700AD314D /* AppDelegate.swift */; };
-		FCABFF6C1EE72B9700AD314D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABFF6B1EE72B9700AD314D /* ViewController.swift */; };
+		FCABFF6C1EE72B9700AD314D /* WeekController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABFF6B1EE72B9700AD314D /* WeekController.swift */; };
 		FCABFF6E1EE72B9700AD314D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCABFF6D1EE72B9700AD314D /* Assets.xcassets */; };
 		FCABFF711EE72B9800AD314D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCABFF6F1EE72B9800AD314D /* Main.storyboard */; };
 		FCABFF7D1EE72B9800AD314D /* FortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABFF7C1EE72B9800AD314D /* FortyTests.swift */; };
@@ -49,7 +49,7 @@
 		FC725F981EF46463009F8C86 /* WorkWeekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWeekTests.swift; sourceTree = "<group>"; };
 		FCABFF661EE72B9700AD314D /* Forty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCABFF691EE72B9700AD314D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCABFF6B1EE72B9700AD314D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCABFF6B1EE72B9700AD314D /* WeekController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekController.swift; sourceTree = "<group>"; };
 		FCABFF6D1EE72B9700AD314D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCABFF701EE72B9800AD314D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCABFF721EE72B9800AD314D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		FC725F9A1EF46585009F8C86 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FCABFF6B1EE72B9700AD314D /* ViewController.swift */,
+				FCABFF6B1EE72B9700AD314D /* WeekController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC45E3C61EF443B8006D758B /* TotalHours.swift in Sources */,
-				FCABFF6C1EE72B9700AD314D /* ViewController.swift in Sources */,
+				FCABFF6C1EE72B9700AD314D /* WeekController.swift in Sources */,
 				FC45E3C41EF43756006D758B /* WorkWeek.swift in Sources */,
 				FC45E3C21EF432D7006D758B /* DayStack.swift in Sources */,
 				FC45E3C81EF443E0006D758B /* Hours.swift in Sources */,

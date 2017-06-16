@@ -2,9 +2,7 @@ import Cocoa
 
 class ViewController: NSViewController {
     private var workWeek: WorkWeek! {
-        didSet {
-            workWeek.fetch()
-        }
+        didSet { workWeek.fetch() }
     }
 
     private var dayStacks: [DayStack] {
@@ -28,7 +26,6 @@ class ViewController: NSViewController {
     }
 
     @IBAction func thisWeekButtonPressed(sender: AnyObject) {
-        // might be nice if this was something like workWeek.currentWeek so that it matches the other IBActions?
         workWeek = WorkWeek.thisWeek(delegate: self)
     }
 
