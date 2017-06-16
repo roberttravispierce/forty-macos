@@ -87,6 +87,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC725F9A1EF46585009F8C86 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCABFF6B1EE72B9700AD314D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FC725F9B1EF46593009F8C86 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC45E3C71EF443E0006D758B /* Hours.swift */,
+				FC45E3C51EF443B8006D758B /* TotalHours.swift */,
+				FC45E3BF1EF42396006D758B /* WorkDay.swift */,
+				FC45E3C31EF43756006D758B /* WorkWeek.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC725F9C1EF465A0009F8C86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC45E3C11EF432D7006D758B /* DayStack.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC725F9D1EF465C3009F8C86 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				FCABFF691EE72B9700AD314D /* AppDelegate.swift */,
+				FCABFF6D1EE72B9700AD314D /* Assets.xcassets */,
+				FCABFF731EE72B9800AD314D /* Forty.entitlements */,
+				FCABFF721EE72B9800AD314D /* Info.plist */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		FC725F9E1EF465D1009F8C86 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FCABFF6F1EE72B9800AD314D /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		FCABFF5D1EE72B9700AD314D = {
 			isa = PBXGroup;
 			children = (
@@ -110,17 +156,11 @@
 		FCABFF681EE72B9700AD314D /* Forty */ = {
 			isa = PBXGroup;
 			children = (
-				FC45E3C51EF443B8006D758B /* TotalHours.swift */,
-				FC45E3C11EF432D7006D758B /* DayStack.swift */,
-				FCABFF691EE72B9700AD314D /* AppDelegate.swift */,
-				FCABFF6B1EE72B9700AD314D /* ViewController.swift */,
-				FCABFF6D1EE72B9700AD314D /* Assets.xcassets */,
-				FCABFF6F1EE72B9800AD314D /* Main.storyboard */,
-				FCABFF721EE72B9800AD314D /* Info.plist */,
-				FCABFF731EE72B9800AD314D /* Forty.entitlements */,
-				FC45E3BF1EF42396006D758B /* WorkDay.swift */,
-				FC45E3C31EF43756006D758B /* WorkWeek.swift */,
-				FC45E3C71EF443E0006D758B /* Hours.swift */,
+				FC725F9A1EF46585009F8C86 /* Controllers */,
+				FC725F9D1EF465C3009F8C86 /* Misc */,
+				FC725F9B1EF46593009F8C86 /* Models */,
+				FC725F9E1EF465D1009F8C86 /* Storyboards */,
+				FC725F9C1EF465A0009F8C86 /* Views */,
 			);
 			path = Forty;
 			sourceTree = "<group>";
@@ -436,9 +476,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Forty/Forty.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Forty/Misc/Forty.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Forty/Info.plist;
+				INFOPLIST_FILE = Forty/Misc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonallured.Forty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -450,9 +490,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Forty/Forty.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Forty/Misc/Forty.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Forty/Info.plist;
+				INFOPLIST_FILE = Forty/Misc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonallured.Forty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
