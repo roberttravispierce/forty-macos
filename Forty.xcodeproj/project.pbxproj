@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCABFF6A1EE72B9700AD314D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABFF691EE72B9700AD314D /* AppDelegate.swift */; };
+		FCABFF6C1EE72B9700AD314D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABFF6B1EE72B9700AD314D /* ViewController.swift */; };
+		FCABFF6E1EE72B9700AD314D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCABFF6D1EE72B9700AD314D /* Assets.xcassets */; };
+		FCABFF711EE72B9800AD314D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCABFF6F1EE72B9800AD314D /* Main.storyboard */; };
+		FCABFF7D1EE72B9800AD314D /* FortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABFF7C1EE72B9800AD314D /* FortyTests.swift */; };
+		FCABFF881EE72B9800AD314D /* FortyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABFF871EE72B9800AD314D /* FortyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCABFF791EE72B9800AD314D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCABFF5E1EE72B9700AD314D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCABFF651EE72B9700AD314D;
+			remoteInfo = Forty;
+		};
+		FCABFF841EE72B9800AD314D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCABFF5E1EE72B9700AD314D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCABFF651EE72B9700AD314D;
+			remoteInfo = Forty;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FCABFF661EE72B9700AD314D /* Forty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCABFF691EE72B9700AD314D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCABFF6B1EE72B9700AD314D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCABFF6D1EE72B9700AD314D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCABFF701EE72B9800AD314D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCABFF721EE72B9800AD314D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCABFF731EE72B9800AD314D /* Forty.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Forty.entitlements; sourceTree = "<group>"; };
+		FCABFF781EE72B9800AD314D /* FortyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCABFF7C1EE72B9800AD314D /* FortyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortyTests.swift; sourceTree = "<group>"; };
+		FCABFF7E1EE72B9800AD314D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCABFF831EE72B9800AD314D /* FortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCABFF871EE72B9800AD314D /* FortyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortyUITests.swift; sourceTree = "<group>"; };
+		FCABFF891EE72B9800AD314D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCABFF631EE72B9700AD314D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCABFF751EE72B9800AD314D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCABFF801EE72B9800AD314D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCABFF5D1EE72B9700AD314D = {
+			isa = PBXGroup;
+			children = (
+				FCABFF681EE72B9700AD314D /* Forty */,
+				FCABFF7B1EE72B9800AD314D /* FortyTests */,
+				FCABFF861EE72B9800AD314D /* FortyUITests */,
+				FCABFF671EE72B9700AD314D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCABFF671EE72B9700AD314D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCABFF661EE72B9700AD314D /* Forty.app */,
+				FCABFF781EE72B9800AD314D /* FortyTests.xctest */,
+				FCABFF831EE72B9800AD314D /* FortyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCABFF681EE72B9700AD314D /* Forty */ = {
+			isa = PBXGroup;
+			children = (
+				FCABFF691EE72B9700AD314D /* AppDelegate.swift */,
+				FCABFF6B1EE72B9700AD314D /* ViewController.swift */,
+				FCABFF6D1EE72B9700AD314D /* Assets.xcassets */,
+				FCABFF6F1EE72B9800AD314D /* Main.storyboard */,
+				FCABFF721EE72B9800AD314D /* Info.plist */,
+				FCABFF731EE72B9800AD314D /* Forty.entitlements */,
+			);
+			path = Forty;
+			sourceTree = "<group>";
+		};
+		FCABFF7B1EE72B9800AD314D /* FortyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCABFF7C1EE72B9800AD314D /* FortyTests.swift */,
+				FCABFF7E1EE72B9800AD314D /* Info.plist */,
+			);
+			path = FortyTests;
+			sourceTree = "<group>";
+		};
+		FCABFF861EE72B9800AD314D /* FortyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FCABFF871EE72B9800AD314D /* FortyUITests.swift */,
+				FCABFF891EE72B9800AD314D /* Info.plist */,
+			);
+			path = FortyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCABFF651EE72B9700AD314D /* Forty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCABFF8C1EE72B9800AD314D /* Build configuration list for PBXNativeTarget "Forty" */;
+			buildPhases = (
+				FCABFF621EE72B9700AD314D /* Sources */,
+				FCABFF631EE72B9700AD314D /* Frameworks */,
+				FCABFF641EE72B9700AD314D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Forty;
+			productName = Forty;
+			productReference = FCABFF661EE72B9700AD314D /* Forty.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCABFF771EE72B9800AD314D /* FortyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCABFF8F1EE72B9800AD314D /* Build configuration list for PBXNativeTarget "FortyTests" */;
+			buildPhases = (
+				FCABFF741EE72B9800AD314D /* Sources */,
+				FCABFF751EE72B9800AD314D /* Frameworks */,
+				FCABFF761EE72B9800AD314D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCABFF7A1EE72B9800AD314D /* PBXTargetDependency */,
+			);
+			name = FortyTests;
+			productName = FortyTests;
+			productReference = FCABFF781EE72B9800AD314D /* FortyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FCABFF821EE72B9800AD314D /* FortyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCABFF921EE72B9800AD314D /* Build configuration list for PBXNativeTarget "FortyUITests" */;
+			buildPhases = (
+				FCABFF7F1EE72B9800AD314D /* Sources */,
+				FCABFF801EE72B9800AD314D /* Frameworks */,
+				FCABFF811EE72B9800AD314D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCABFF851EE72B9800AD314D /* PBXTargetDependency */,
+			);
+			name = FortyUITests;
+			productName = FortyUITests;
+			productReference = FCABFF831EE72B9800AD314D /* FortyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCABFF5E1EE72B9700AD314D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Jonathan Allured";
+				TargetAttributes = {
+					FCABFF651EE72B9700AD314D = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					FCABFF771EE72B9800AD314D = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = FCABFF651EE72B9700AD314D;
+					};
+					FCABFF821EE72B9800AD314D = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = FCABFF651EE72B9700AD314D;
+					};
+				};
+			};
+			buildConfigurationList = FCABFF611EE72B9700AD314D /* Build configuration list for PBXProject "Forty" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCABFF5D1EE72B9700AD314D;
+			productRefGroup = FCABFF671EE72B9700AD314D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCABFF651EE72B9700AD314D /* Forty */,
+				FCABFF771EE72B9800AD314D /* FortyTests */,
+				FCABFF821EE72B9800AD314D /* FortyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCABFF641EE72B9700AD314D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCABFF6E1EE72B9700AD314D /* Assets.xcassets in Resources */,
+				FCABFF711EE72B9800AD314D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCABFF761EE72B9800AD314D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCABFF811EE72B9800AD314D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCABFF621EE72B9700AD314D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCABFF6C1EE72B9700AD314D /* ViewController.swift in Sources */,
+				FCABFF6A1EE72B9700AD314D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCABFF741EE72B9800AD314D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCABFF7D1EE72B9800AD314D /* FortyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCABFF7F1EE72B9800AD314D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCABFF881EE72B9800AD314D /* FortyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCABFF7A1EE72B9800AD314D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCABFF651EE72B9700AD314D /* Forty */;
+			targetProxy = FCABFF791EE72B9800AD314D /* PBXContainerItemProxy */;
+		};
+		FCABFF851EE72B9800AD314D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCABFF651EE72B9700AD314D /* Forty */;
+			targetProxy = FCABFF841EE72B9800AD314D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FCABFF6F1EE72B9800AD314D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCABFF701EE72B9800AD314D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCABFF8A1EE72B9800AD314D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCABFF8B1EE72B9800AD314D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		FCABFF8D1EE72B9800AD314D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Forty/Forty.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Forty/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonallured.Forty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		FCABFF8E1EE72B9800AD314D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Forty/Forty.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Forty/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonallured.Forty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		FCABFF901EE72B9800AD314D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FortyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonallured.FortyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Forty.app/Contents/MacOS/Forty";
+			};
+			name = Debug;
+		};
+		FCABFF911EE72B9800AD314D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FortyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonallured.FortyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Forty.app/Contents/MacOS/Forty";
+			};
+			name = Release;
+		};
+		FCABFF931EE72B9800AD314D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FortyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonallured.FortyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Forty;
+			};
+			name = Debug;
+		};
+		FCABFF941EE72B9800AD314D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FortyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonallured.FortyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Forty;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCABFF611EE72B9700AD314D /* Build configuration list for PBXProject "Forty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCABFF8A1EE72B9800AD314D /* Debug */,
+				FCABFF8B1EE72B9800AD314D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCABFF8C1EE72B9800AD314D /* Build configuration list for PBXNativeTarget "Forty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCABFF8D1EE72B9800AD314D /* Debug */,
+				FCABFF8E1EE72B9800AD314D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FCABFF8F1EE72B9800AD314D /* Build configuration list for PBXNativeTarget "FortyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCABFF901EE72B9800AD314D /* Debug */,
+				FCABFF911EE72B9800AD314D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FCABFF921EE72B9800AD314D /* Build configuration list for PBXNativeTarget "FortyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCABFF931EE72B9800AD314D /* Debug */,
+				FCABFF941EE72B9800AD314D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCABFF5E1EE72B9700AD314D /* Project object */;
+}
