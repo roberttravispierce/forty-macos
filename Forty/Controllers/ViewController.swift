@@ -41,49 +41,40 @@ class ViewController: NSViewController {
     private func fillDayStack() {
         for (index, workDay) in workWeek.workDays.enumerated() {
             let dayStack = dayStacks[index]
-            dayStack.inTextField?.stringValue = workDay.inTime
-            dayStack.outTextField?.stringValue = workDay.outTime
-            dayStack.ptoTextField?.stringValue = workDay.ptoHours
-            dayStack.adjustTextField?.stringValue = workDay.adjustHours
+            dayStack.inTextField.stringValue = workDay.inTime
+            dayStack.outTextField.stringValue = workDay.outTime
+            dayStack.ptoTextField.stringValue = workDay.ptoHours
+            dayStack.adjustTextField.stringValue = workDay.adjustHours
         }
     }
 
     private func recompute(control: NSControl) {
-        guard let dayStack = control.superview as? DayStack,
-            let inTextField = dayStack.inTextField,
-            let outTextField = dayStack.outTextField,
-            let ptoTextField = dayStack.ptoTextField,
-            let adjustTextField = dayStack.adjustTextField,
-            let totalTextField = dayStack.totalTextField
+        guard let dayStack = control.superview as? DayStack
             else { fatalError() }
 
         let dailyTotal = TotalHours.daily(
-            inTimeString: inTextField.stringValue,
-            outTimeString: outTextField.stringValue,
-            ptoHoursString: ptoTextField.stringValue,
-            adjustHoursString: adjustTextField.stringValue
+            inTimeString: dayStack.inTextField.stringValue,
+            outTimeString: dayStack.outTextField.stringValue,
+            ptoHoursString: dayStack.ptoTextField.stringValue,
+            adjustHoursString: dayStack.adjustTextField.stringValue
         )
-        totalTextField.stringValue = dailyTotal
+        dayStack.totalTextField.stringValue = dailyTotal
 
-        let totalStrings = dayStacks.flatMap { $0.totalTextField?.stringValue }
+        let totalStrings: [String] = dayStacks.flatMap { $0.totalTextField.stringValue }
         let grandTotal = TotalHours.weekly(totalStrings: totalStrings)
         grandTotalTextField.stringValue = grandTotal
     }
 
     private func updateWorkDay(control: NSControl) {
         guard let dayStack = control.superview as? DayStack,
-            let inTextField = dayStack.inTextField,
-            let outTextField = dayStack.outTextField,
-            let ptoTextField = dayStack.ptoTextField,
-            let adjustTextField = dayStack.adjustTextField,
             let index = dayStacks.index(of: dayStack)
             else { fatalError() }
 
         let workDay = workWeek.workDays[index]
-        workDay.inTime = inTextField.stringValue
-        workDay.outTime = outTextField.stringValue
-        workDay.ptoHours = ptoTextField.stringValue
-        workDay.adjustHours = adjustTextField.stringValue
+        workDay.inTime = dayStack.inTextField.stringValue
+        workDay.outTime = dayStack.outTextField.stringValue
+        workDay.ptoHours = dayStack.ptoTextField.stringValue
+        workDay.adjustHours = dayStack.adjustTextField.stringValue
 
         workDay.save()
     }
@@ -96,9 +87,7 @@ extension ViewController: WorkWeekDelegate {
             self.weekRangeTextField.stringValue = self.workWeek.asString
             self.fillDayStack()
             for dayStack in self.dayStacks {
-                if let inTextField = dayStack.inTextField {
-                    self.recompute(control: inTextField)
-                }
+                self.recompute(control: dayStack.inTextField)
             }
         }
     }

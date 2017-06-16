@@ -12,23 +12,33 @@ class DayStack: NSStackView {
         return subviews.flatMap { $0 as? TimeEntryTextField }
     }
 
-    var inTextField: InTextField? {
-        return subviews.flatMap({ $0 as? InTextField }).first
+    var inTextField: InTextField {
+        guard let field = subviews.flatMap({ $0 as? InTextField }).first
+            else { fatalError() }
+        return field
     }
 
-    var outTextField: OutTextField? {
-        return subviews.flatMap({ $0 as? OutTextField }).first
+    var outTextField: OutTextField {
+        guard let field = subviews.flatMap({ $0 as? OutTextField }).first
+            else { fatalError() }
+        return field
     }
 
-    var ptoTextField: PtoTextField? {
-        return subviews.flatMap({ $0 as? PtoTextField }).first
+    var ptoTextField: PtoTextField {
+        guard let field = subviews.flatMap({ $0 as? PtoTextField }).first
+            else { fatalError() }
+        return field
     }
 
-    var adjustTextField: AdjustTextField? {
-        return subviews.flatMap({ $0 as? AdjustTextField }).first
+    var adjustTextField: AdjustTextField {
+        guard let field = subviews.flatMap({ $0 as? AdjustTextField }).first
+            else { fatalError() }
+        return field
     }
 
-    var totalTextField: TotalTextField? {
-        return subviews.flatMap({ $0 as? TotalTextField }).first
+    var totalTextField: TotalTextField {
+        guard let field = subviews.flatMap({ $0 as? TotalTextField }).first
+            else { fatalError() }
+        return field
     }
 }
