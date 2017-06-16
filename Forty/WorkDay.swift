@@ -1,11 +1,3 @@
-//
-//  WorkDay.swift
-//  Forty
-//
-//  Created by Jonathan Allured on 6/16/17.
-//  Copyright © 2017 Jonathan Allured. All rights reserved.
-//
-
 import Foundation
 
 // not sure where a cooler place for this is - i wanted to put it on the class, but had trouble with that.
