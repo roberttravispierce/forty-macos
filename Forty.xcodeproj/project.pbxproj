@@ -509,6 +509,7 @@
 				FCABFF8E1EE72B9800AD314D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCABFF8F1EE72B9800AD314D /* Build configuration list for PBXNativeTarget "FortyTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +518,7 @@
 				FCABFF911EE72B9800AD314D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCABFF921EE72B9800AD314D /* Build configuration list for PBXNativeTarget "FortyUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +527,7 @@
 				FCABFF941EE72B9800AD314D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
