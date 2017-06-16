@@ -78,18 +78,19 @@ class ViewController: NSViewController {
 
         workDay.save()
     }
+
+    private func drawWorkWeek() {
+        weekRangeTextField.stringValue = workWeek.asString
+        fillDayStack()
+        for dayStack in dayStacks {
+            recompute(control: dayStack.inTextField)
+        }
+    }
 }
 
 extension ViewController: WorkWeekDelegate {
     func didFetch() {
-        DispatchQueue.main.async {
-            // maybe this should be extracted to a function that is called here so that i don't have to have all these selfs...
-            self.weekRangeTextField.stringValue = self.workWeek.asString
-            self.fillDayStack()
-            for dayStack in self.dayStacks {
-                self.recompute(control: dayStack.inTextField)
-            }
-        }
+        DispatchQueue.main.async { self.drawWorkWeek() }
     }
 }
 
