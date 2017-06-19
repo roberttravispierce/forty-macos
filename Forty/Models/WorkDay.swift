@@ -1,13 +1,12 @@
 import Foundation
 
-// not sure where a cooler place for this is - i wanted to put it on the class, but had trouble with that.
-private let formatter: DateFormatter = {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd"
-    return dateFormatter
-}()
-
 class WorkDay {
+    private static let formatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter
+    }()
+
     var id: Int
     var date: Date
 
@@ -28,7 +27,7 @@ class WorkDay {
     init?(_ attrs: [String: Any]) {
         guard let id = attrs["id"] as? Int,
             let dateString = attrs["date"] as? String,
-            let date = formatter.date(from: dateString)
+            let date = WorkDay.formatter.date(from: dateString)
             else { return nil }
 
         self.id = id
