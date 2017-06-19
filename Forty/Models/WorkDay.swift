@@ -39,16 +39,4 @@ class WorkDay {
         self.outTime = attrs["out_time"] as? String ?? ""
         self.ptoHours = attrs["pto_hours"] as? String ?? ""
     }
-
-    func save() {
-        let url = URL(string: "https://forty-rails.herokuapp.com/api/v1/work_days/\(id)")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "PATCH"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue(ClientToken, forHTTPHeaderField: "X-CLIENT-TOKEN")
-        let data = try? JSONSerialization.data(withJSONObject: ["work_day": asObject])
-        request.httpBody = data
-        let task = URLSession.shared.dataTask(with: request)
-        task.resume()
-    }
 }

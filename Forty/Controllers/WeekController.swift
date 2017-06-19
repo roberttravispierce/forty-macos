@@ -73,7 +73,7 @@ class ViewController: NSViewController {
         workDay.ptoHours = dayStack.ptoTextField.stringValue
         workDay.adjustHours = dayStack.adjustTextField.stringValue
 
-        workDay.save()
+        workWeek.updateWeek(workDay: workDay)
     }
 
     private func drawWorkWeek() {
