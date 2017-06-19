@@ -776,12 +776,12 @@
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                                         <subviews>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aOR-Id-aBO" customClass="DayStack" customModule="Forty" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="3" width="73.5" height="197"/>
+                                                <rect key="frame" x="0.0" y="4" width="73.5" height="196"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9ZH-ZF-oVV">
-                                                        <rect key="frame" x="-2" y="180" width="74" height="17"/>
+                                                        <rect key="frame" x="-2" y="180" width="74" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Monday" id="XXq-Xm-Aag">
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="system" size="12"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -855,12 +855,12 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Irp-8D-8LW" customClass="DayStack" customModule="Forty" customModuleProvider="target">
-                                                <rect key="frame" x="81.5" y="3" width="73.5" height="197"/>
+                                                <rect key="frame" x="81.5" y="4" width="73.5" height="196"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Lv-am-41l">
-                                                        <rect key="frame" x="-2" y="180" width="74" height="17"/>
+                                                        <rect key="frame" x="-2" y="180" width="74" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Tuesday" id="6Vd-CH-Jvj">
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="system" size="12"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -934,12 +934,12 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9hu-q4-PaX" customClass="DayStack" customModule="Forty" customModuleProvider="target">
-                                                <rect key="frame" x="163" y="3" width="74" height="197"/>
+                                                <rect key="frame" x="163" y="4" width="74" height="196"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lai-Hb-Bn8">
-                                                        <rect key="frame" x="-2" y="180" width="74" height="17"/>
+                                                        <rect key="frame" x="-2" y="180" width="74" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Wednesday" id="YvY-TV-yKO">
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="system" size="12"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -1013,12 +1013,12 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YdD-hy-XpT" customClass="DayStack" customModule="Forty" customModuleProvider="target">
-                                                <rect key="frame" x="245" y="3" width="73.5" height="197"/>
+                                                <rect key="frame" x="245" y="4" width="73.5" height="196"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q6S-wY-Xa6">
-                                                        <rect key="frame" x="-2" y="180" width="74" height="17"/>
+                                                        <rect key="frame" x="-2" y="180" width="74" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Thursday" id="xkt-KA-Weu">
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="system" size="12"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -1092,12 +1092,12 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zUq-fM-svc" customClass="DayStack" customModule="Forty" customModuleProvider="target">
-                                                <rect key="frame" x="326.5" y="3" width="73.5" height="197"/>
+                                                <rect key="frame" x="326.5" y="4" width="73.5" height="196"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="igr-V0-QEw">
-                                                        <rect key="frame" x="-2" y="180" width="74" height="17"/>
+                                                        <rect key="frame" x="-2" y="180" width="74" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Friday" id="Mf0-6C-Iv0">
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="system" size="12"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
