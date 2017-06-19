@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FC2F55251EF86DDC0097C5A5 /* ClientToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2F55241EF86DDC0097C5A5 /* ClientToken.swift */; };
+		FC2F55271EF879580097C5A5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2F55261EF879580097C5A5 /* Endpoint.swift */; };
+		FC2F55291EF879760097C5A5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2F55281EF879760097C5A5 /* Router.swift */; };
 		FC45E3C01EF42396006D758B /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45E3BF1EF42396006D758B /* WorkDay.swift */; };
 		FC45E3C21EF432D7006D758B /* DayStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45E3C11EF432D7006D758B /* DayStack.swift */; };
 		FC45E3C41EF43756006D758B /* WorkWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45E3C31EF43756006D758B /* WorkWeek.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		FC2F55241EF86DDC0097C5A5 /* ClientToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientToken.swift; sourceTree = "<group>"; };
+		FC2F55261EF879580097C5A5 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		FC2F55281EF879760097C5A5 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC45E3BF1EF42396006D758B /* WorkDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDay.swift; sourceTree = "<group>"; };
 		FC45E3C11EF432D7006D758B /* DayStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayStack.swift; sourceTree = "<group>"; };
 		FC45E3C31EF43756006D758B /* WorkWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWeek.swift; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC2F552A1EF879D50097C5A5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FC2F55261EF879580097C5A5 /* Endpoint.swift */,
+				FC2F55281EF879760097C5A5 /* Router.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		FC725F9A1EF46585009F8C86 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +175,7 @@
 				FC725F9A1EF46585009F8C86 /* Controllers */,
 				FC725F9D1EF465C3009F8C86 /* Misc */,
 				FC725F9B1EF46593009F8C86 /* Models */,
+				FC2F552A1EF879D50097C5A5 /* Networking */,
 				FC725F9E1EF465D1009F8C86 /* Storyboards */,
 				FC725F9C1EF465A0009F8C86 /* Views */,
 			);
@@ -319,6 +333,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC45E3C61EF443B8006D758B /* TotalHours.swift in Sources */,
+				FC2F55271EF879580097C5A5 /* Endpoint.swift in Sources */,
+				FC2F55291EF879760097C5A5 /* Router.swift in Sources */,
 				FCABFF6C1EE72B9700AD314D /* WeekController.swift in Sources */,
 				FC45E3C41EF43756006D758B /* WorkWeek.swift in Sources */,
 				FC45E3C21EF432D7006D758B /* DayStack.swift in Sources */,

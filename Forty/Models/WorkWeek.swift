@@ -53,12 +53,8 @@ class WorkWeek {
         let number = Calendar.current.component(.weekOfYear, from: monday)
         let year = Calendar.current.component(.year, from: monday)
 
-        let url = URL(string: "https://forty-rails.herokuapp.com/api/v1/work_weeks/\(year)/\(number)")!
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue(ClientToken, forHTTPHeaderField: "X-CLIENT-TOKEN")
-        let task = URLSession.shared.dataTask(with: request, completionHandler: handleResponse)
-        task.resume()
+        let endpoint = Endpoint.showWorkWeek(year: year, number: number)
+        Router.hit(endpoint, handler: handleResponse)
     }
 
     func handleResponse(data: Data?, response: URLResponse?, error: Error?) {
@@ -73,15 +69,7 @@ class WorkWeek {
     }
 
     func updateWeek(workDay: WorkDay) {
-        let url = URL(string: "https://forty-rails.herokuapp.com/api/v1/work_days/\(workDay.id)")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "PATCH"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue(ClientToken, forHTTPHeaderField: "X-CLIENT-TOKEN")
-        let data = try? JSONSerialization.data(withJSONObject: ["work_day": workDay.asObject])
-        request.httpBody = data
-        let task = URLSession.shared.dataTask(with: request)
-        task.resume()
+        Router.hit(.updateWorkDay(workDay: workDay))
     }
 }
 
