@@ -53,10 +53,10 @@ class WorkWeek {
         let number = Calendar.current.component(.weekOfYear, from: monday)
         let year = Calendar.current.component(.year, from: monday)
 
-        // need to add the token to the headers!!
         let url = URL(string: "https://forty-rails.herokuapp.com/api/v1/work_weeks/\(year)/\(number)")!
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue(ClientToken, forHTTPHeaderField: "X-CLIENT-TOKEN")
         let task = URLSession.shared.dataTask(with: request, completionHandler: handleResponse)
         task.resume()
     }

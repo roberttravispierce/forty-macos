@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC2F55251EF86DDC0097C5A5 /* ClientToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2F55241EF86DDC0097C5A5 /* ClientToken.swift */; };
 		FC45E3C01EF42396006D758B /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45E3BF1EF42396006D758B /* WorkDay.swift */; };
 		FC45E3C21EF432D7006D758B /* DayStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45E3C11EF432D7006D758B /* DayStack.swift */; };
 		FC45E3C41EF43756006D758B /* WorkWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC45E3C31EF43756006D758B /* WorkWeek.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC2F55241EF86DDC0097C5A5 /* ClientToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientToken.swift; sourceTree = "<group>"; };
 		FC45E3BF1EF42396006D758B /* WorkDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDay.swift; sourceTree = "<group>"; };
 		FC45E3C11EF432D7006D758B /* DayStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayStack.swift; sourceTree = "<group>"; };
 		FC45E3C31EF43756006D758B /* WorkWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWeek.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				FCABFF691EE72B9700AD314D /* AppDelegate.swift */,
 				FCABFF6D1EE72B9700AD314D /* Assets.xcassets */,
+				FC2F55241EF86DDC0097C5A5 /* ClientToken.swift */,
 				FCABFF731EE72B9800AD314D /* Forty.entitlements */,
 				FCABFF721EE72B9800AD314D /* Info.plist */,
 			);
@@ -319,6 +322,7 @@
 				FCABFF6C1EE72B9700AD314D /* WeekController.swift in Sources */,
 				FC45E3C41EF43756006D758B /* WorkWeek.swift in Sources */,
 				FC45E3C21EF432D7006D758B /* DayStack.swift in Sources */,
+				FC2F55251EF86DDC0097C5A5 /* ClientToken.swift in Sources */,
 				FC45E3C81EF443E0006D758B /* Hours.swift in Sources */,
 				FCABFF6A1EE72B9700AD314D /* AppDelegate.swift in Sources */,
 				FC45E3C01EF42396006D758B /* WorkDay.swift in Sources */,
