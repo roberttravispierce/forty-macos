@@ -55,7 +55,9 @@ class WorkWeek {
 
         // need to add the token to the headers!!
         let url = URL(string: "https://forty-rails.herokuapp.com/api/v1/work_weeks/\(year)/\(number)")!
-        let task = URLSession.shared.dataTask(with: url, completionHandler: handleResponse)
+        var request = URLRequest(url: url)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        let task = URLSession.shared.dataTask(with: request, completionHandler: handleResponse)
         task.resume()
     }
 
