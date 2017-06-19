@@ -12,22 +12,12 @@ class WorkWeek {
         return formatter
     }()
 
-    // i'm suspicious of this property - seems like the only reason i need it now
-    // is to help asString work out what should be returned and that could easily
-    // come another way
-    private let dates: [Date]
-
-    private var monday: Date {
-        return dates.first!
-    }
-
-    private var friday: Date {
-        return dates.last!
-    }
-
     static func thisWeek(delegate: WorkWeekDelegate) -> WorkWeek {
         return WorkWeek(delegate: delegate, date: Date())
     }
+
+    private let monday: Date
+    private let friday: Date
 
     var delegate: WorkWeekDelegate
     var workDays = [WorkDay]()
@@ -46,7 +36,7 @@ class WorkWeek {
 
     init(delegate: WorkWeekDelegate, date: Date) {
         self.delegate = delegate
-        dates = Calendar.current.weekdays(lol: date)
+        (monday, friday) = Calendar.current.workWeek(from: date)
     }
 
     func fetch() {
@@ -74,19 +64,21 @@ class WorkWeek {
 }
 
 private extension Calendar {
-    func weekdays(lol: Date) -> [Date] {
-        var components = dateComponents([.year, .weekOfYear], from: lol)
+    func workWeek(from: Date) -> (monday: Date, friday: Date) {
+        var components = dateComponents([.year, .weekOfYear], from: from)
 
         components.hour = 0
         components.minute = 0
         components.second = 0
 
-        let weekdays = [2, 3, 4, 5, 6]
+        let weekdayComponents = [2, 6]
 
-        return weekdays.flatMap { weekday in
-            components.weekday = weekday
+        let days: [Date] = weekdayComponents.flatMap { weekdayComponent in
+            components.weekday = weekdayComponent
             return date(from: components)
         }
+
+        return (days.first!, days.last!)
     }
 }
 
