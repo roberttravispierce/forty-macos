@@ -1,6 +1,11 @@
 import Cocoa
 
-class TimeEntryTextField: NSTextField {}
+class TimeEntryTextField: NSTextField {
+    func redraw(string: String?) {
+        stringValue = string ?? ""
+    }
+}
+
 class InTextField: TimeEntryTextField {}
 class OutTextField: TimeEntryTextField {}
 class PtoTextField: TimeEntryTextField {}
@@ -8,6 +13,12 @@ class AdjustTextField: TimeEntryTextField {}
 class TotalTextField: NSTextField {}
 
 class DayStack: NSStackView {
+    var workDay: WorkDay! {
+        didSet {
+            redraw()
+        }
+    }
+
     var timeEntryTextFields: [TimeEntryTextField] {
         return subviews.flatMap { $0 as? TimeEntryTextField }
     }
@@ -40,5 +51,12 @@ class DayStack: NSStackView {
         guard let field = subviews.flatMap({ $0 as? TotalTextField }).first
             else { fatalError() }
         return field
+    }
+
+    func redraw() {
+        inTextField.redraw(string: workDay.inTime)
+        outTextField.redraw(string: workDay.outTime)
+        ptoTextField.redraw(string: workDay.ptoHours)
+        adjustTextField.redraw(string: workDay.adjustHours)
     }
 }
