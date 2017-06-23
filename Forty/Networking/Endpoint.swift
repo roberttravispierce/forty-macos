@@ -4,18 +4,13 @@ enum Endpoint {
     case showWorkWeek(year: Int, number: Int)
     case updateWorkDay(workDay: WorkDay)
 
-    private var payload: Any? {
+    var data: Data? {
         switch self {
         case .updateWorkDay(let workDay):
-            return ["work_day": workDay.asObject]
+            return try? JSONEncoder().encode(workDay)
         default:
             return nil
         }
-    }
-
-    var data: Data? {
-        guard let payload = payload else { return nil }
-        return try! JSONSerialization.data(withJSONObject: payload)
     }
 
     var method: String {

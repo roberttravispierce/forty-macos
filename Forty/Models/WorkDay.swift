@@ -9,16 +9,7 @@ class WorkDay: Codable {
     var outTime: String
     var ptoHours: String
 
-    var asObject: [String: String] {
-        return [
-            "adjust_hours": adjustHours,
-            "in_time": inTime,
-            "out_time": outTime,
-            "pto_hours": ptoHours
-        ]
-    }
-
-    enum CodingKeys : String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case id
         case date
         case adjustHours = "adjust_hours"
