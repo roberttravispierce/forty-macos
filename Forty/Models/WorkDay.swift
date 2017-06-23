@@ -1,8 +1,8 @@
 import Foundation
 
-class WorkDay: Codable {
-    var id: Int
-    var date: Date
+struct WorkDay: Codable {
+    let id: Int
+    let date: Date
 
     var adjustHours: String?
     var inTime: String?
@@ -16,14 +16,5 @@ class WorkDay: Codable {
         case inTime = "in_time"
         case outTime = "out_time"
         case ptoHours = "pto_hours"
-    }
-
-    init(id: Int, date: Date, adjustHours: String, inTime: String, outTime: String, ptoHours: String) {
-        self.id = id
-        self.date = date
-        self.adjustHours = adjustHours
-        self.inTime = inTime
-        self.outTime = outTime
-        self.ptoHours = ptoHours
     }
 }

@@ -67,7 +67,7 @@ class ViewController: NSViewController {
             let index = dayStacks.index(of: dayStack)
             else { fatalError() }
 
-        let workDay = workWeek.workDays[index]
+        var workDay = workWeek.workDays[index]
         workDay.inTime = dayStack.inTextField.stringValue
         workDay.outTime = dayStack.outTextField.stringValue
         workDay.ptoHours = dayStack.ptoTextField.stringValue
