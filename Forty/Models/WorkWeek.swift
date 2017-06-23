@@ -48,13 +48,8 @@ class WorkWeek {
     }
 
     func handleResponse(data: Data?, response: URLResponse?, error: Error?) {
-        guard let data = data,
-            let object = try? JSONSerialization.jsonObject(with: data),
-            let json = object as? [String: Any],
-            let workDayAttrs = json["work_days"] as? [[String: Any]]
-            else { return }
-
-        workDays = workDayAttrs.flatMap { WorkDay($0) }
+        guard let workDayList = WorkDayList.decode(from: data) else { return }
+        workDays = workDayList.workDays
         delegate.didFetch()
     }
 

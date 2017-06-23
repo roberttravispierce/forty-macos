@@ -23,6 +23,7 @@
 		FCABFF711EE72B9800AD314D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCABFF6F1EE72B9800AD314D /* Main.storyboard */; };
 		FCABFF7D1EE72B9800AD314D /* FortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABFF7C1EE72B9800AD314D /* FortyTests.swift */; };
 		FCABFF881EE72B9800AD314D /* FortyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABFF871EE72B9800AD314D /* FortyUITests.swift */; };
+		FCFC6A4C1EFD65AD00FECD14 /* WorkDayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC6A4B1EFD65AD00FECD14 /* WorkDayList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		FCABFF831EE72B9800AD314D /* FortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCABFF871EE72B9800AD314D /* FortyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortyUITests.swift; sourceTree = "<group>"; };
 		FCABFF891EE72B9800AD314D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCFC6A4B1EFD65AD00FECD14 /* WorkDayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDayList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		FC725F9B1EF46593009F8C86 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FCFC6A4B1EFD65AD00FECD14 /* WorkDayList.swift */,
 				FC45E3C71EF443E0006D758B /* Hours.swift */,
 				FC45E3C51EF443B8006D758B /* TotalHours.swift */,
 				FC45E3BF1EF42396006D758B /* WorkDay.swift */,
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC45E3C61EF443B8006D758B /* TotalHours.swift in Sources */,
+				FCFC6A4C1EFD65AD00FECD14 /* WorkDayList.swift in Sources */,
 				FC2F55271EF879580097C5A5 /* Endpoint.swift in Sources */,
 				FC2F55291EF879760097C5A5 /* Router.swift in Sources */,
 				FCABFF6C1EE72B9700AD314D /* WeekController.swift in Sources */,

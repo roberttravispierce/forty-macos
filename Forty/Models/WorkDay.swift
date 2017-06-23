@@ -1,12 +1,6 @@
 import Foundation
 
-class WorkDay {
-    private static let formatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter
-    }()
-
+class WorkDay: Codable {
     var id: Int
     var date: Date
 
@@ -24,18 +18,21 @@ class WorkDay {
         ]
     }
 
-    init?(_ attrs: [String: Any]) {
-        guard let id = attrs["id"] as? Int,
-            let dateString = attrs["date"] as? String,
-            let date = WorkDay.formatter.date(from: dateString)
-            else { return nil }
+    enum CodingKeys : String, CodingKey {
+        case id
+        case date
+        case adjustHours = "adjust_hours"
+        case inTime = "in_time"
+        case outTime = "out_time"
+        case ptoHours = "pto_hours"
+    }
 
+    init(id: Int, date: Date, adjustHours: String, inTime: String, outTime: String, ptoHours: String) {
         self.id = id
         self.date = date
-
-        self.adjustHours = attrs["adjust_hours"] as? String ?? ""
-        self.inTime = attrs["in_time"] as? String ?? ""
-        self.outTime = attrs["out_time"] as? String ?? ""
-        self.ptoHours = attrs["pto_hours"] as? String ?? ""
+        self.adjustHours = adjustHours
+        self.inTime = inTime
+        self.outTime = outTime
+        self.ptoHours = ptoHours
     }
 }
