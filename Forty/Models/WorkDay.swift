@@ -4,10 +4,10 @@ class WorkDay: Codable {
     var id: Int
     var date: Date
 
-    var adjustHours: String
-    var inTime: String
-    var outTime: String
-    var ptoHours: String
+    var adjustHours: String?
+    var inTime: String?
+    var outTime: String?
+    var ptoHours: String?
 
     enum CodingKeys: String, CodingKey {
         case id

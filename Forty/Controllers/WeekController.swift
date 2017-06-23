@@ -38,10 +38,10 @@ class ViewController: NSViewController {
     private func fillDayStack() {
         for (index, workDay) in workWeek.workDays.enumerated() {
             let dayStack = dayStacks[index]
-            dayStack.inTextField.stringValue = workDay.inTime
-            dayStack.outTextField.stringValue = workDay.outTime
-            dayStack.ptoTextField.stringValue = workDay.ptoHours
-            dayStack.adjustTextField.stringValue = workDay.adjustHours
+            dayStack.inTextField.stringValue = workDay.inTime ?? ""
+            dayStack.outTextField.stringValue = workDay.outTime ?? ""
+            dayStack.ptoTextField.stringValue = workDay.ptoHours ?? ""
+            dayStack.adjustTextField.stringValue = workDay.adjustHours ?? ""
         }
     }
 
