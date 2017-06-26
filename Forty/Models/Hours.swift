@@ -46,7 +46,7 @@ class Hours {
     let minutes: Int?
 
     static var zero: Hours {
-        return Hours(hours: 0, minutes: 0)
+        return Hours(string: nil)
     }
 
     var isValid: Bool {
@@ -67,8 +67,10 @@ class Hours {
         self.minutes = minutes
     }
 
-    convenience init(string: String) {
-        self.init(hours: string.hours, minutes: string.minutes)
+    convenience init(string: String?) {
+        let hours = string?.hours ?? 0
+        let minutes = string?.minutes ?? 0
+        self.init(hours: hours, minutes: minutes)
     }
 }
 

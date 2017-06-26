@@ -1,11 +1,11 @@
 import Foundation
 
 struct TotalHours {
-    static func daily(inTimeString: String, outTimeString: String, ptoHoursString: String, adjustHoursString: String) -> String {
-        let inTime = Time(string: inTimeString)
-        let outTime = Time(string: outTimeString)
-        let ptoHours = Hours(string: ptoHoursString)
-        let adjustHours = Hours(string: adjustHoursString)
+    static func daily(workDay: WorkDay) -> String {
+        let inTime = Time(string: workDay.inTime)
+        let outTime = Time(string: workDay.outTime)
+        let ptoHours = Hours(string: workDay.ptoHours)
+        let adjustHours = Hours(string: workDay.adjustHours)
 
         let workedHours = outTime - inTime
         let totalHours = workedHours + ptoHours - adjustHours

@@ -42,16 +42,11 @@ class ViewController: NSViewController {
     }
 
     private func recompute(control: NSControl) {
-        guard let dayStack = control.superview as? DayStack
+        guard let dayStack = control.superview as? DayStack,
+            let index = dayStacks.index(of: dayStack)
             else { fatalError() }
 
-        let dailyTotal = TotalHours.daily(
-            inTimeString: dayStack.inTextField.stringValue,
-            outTimeString: dayStack.outTextField.stringValue,
-            ptoHoursString: dayStack.ptoTextField.stringValue,
-            adjustHoursString: dayStack.adjustTextField.stringValue
-        )
-        dayStack.totalTextField.stringValue = dailyTotal
+        dayStack.totalTextField.stringValue = workWeek.dayTotal(index: index)
 
         let totalStrings: [String] = dayStacks.flatMap { $0.totalTextField.stringValue }
         let grandTotal = TotalHours.weekly(dailyTotals: totalStrings)

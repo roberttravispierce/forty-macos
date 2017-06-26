@@ -68,6 +68,11 @@ class WorkWeek {
 
         Router.hit(.updateWorkDay(workDay: workDay))
     }
+
+    func dayTotal(index: Int) -> String {
+        let workDay = workDays[index]
+        return TotalHours.daily(workDay: workDay)
+    }
 }
 
 private extension Calendar {
