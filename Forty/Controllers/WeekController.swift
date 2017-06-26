@@ -47,10 +47,7 @@ class ViewController: NSViewController {
             else { fatalError() }
 
         dayStack.totalTextField.stringValue = workWeek.dayTotal(index: index)
-
-        let totalStrings: [String] = dayStacks.flatMap { $0.totalTextField.stringValue }
-        let grandTotal = TotalHours.weekly(dailyTotals: totalStrings)
-        grandTotalTextField.stringValue = grandTotal
+        grandTotalTextField.stringValue = workWeek.grandTotal()
     }
 
     private func updateWorkDay(control: NSControl) {

@@ -73,6 +73,11 @@ class WorkWeek {
         let workDay = workDays[index]
         return TotalHours.daily(workDay: workDay)
     }
+
+    func grandTotal() -> String {
+        let dailyTotals = workDays.map { TotalHours.daily(workDay: $0) }
+        return TotalHours.weekly(dailyTotals: dailyTotals)
+    }
 }
 
 private extension Calendar {
