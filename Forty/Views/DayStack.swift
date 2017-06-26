@@ -1,15 +1,39 @@
 import Cocoa
 
+protocol AttrTextField {
+    var attrKey: WorkDay.CodingKeys { get }
+    var attrValue: String? { get }
+    var stringValue: String { get set }
+}
+
+extension AttrTextField {
+    var attrValue: String? {
+        return stringValue == "" ? nil : stringValue
+    }
+}
+
 class TimeEntryTextField: NSTextField {
     func redraw(string: String?) {
         stringValue = string ?? ""
     }
 }
 
-class InTextField: TimeEntryTextField {}
-class OutTextField: TimeEntryTextField {}
-class PtoTextField: TimeEntryTextField {}
-class AdjustTextField: TimeEntryTextField {}
+class InTextField: TimeEntryTextField, AttrTextField {
+    var attrKey = WorkDay.CodingKeys.inTime
+}
+
+class OutTextField: TimeEntryTextField, AttrTextField {
+    var attrKey = WorkDay.CodingKeys.outTime
+}
+
+class PtoTextField: TimeEntryTextField, AttrTextField {
+    var attrKey = WorkDay.CodingKeys.ptoHours
+}
+
+class AdjustTextField: TimeEntryTextField, AttrTextField {
+    var attrKey = WorkDay.CodingKeys.adjustHours
+}
+
 class TotalTextField: NSTextField {}
 
 class DayStack: NSStackView {
@@ -17,6 +41,14 @@ class DayStack: NSStackView {
         didSet {
             redraw()
         }
+    }
+
+    var attrs: [String: String?] {
+        let fields = timeEntryTextFields.flatMap { $0 as? AttrTextField }
+        var fieldAttrs = [String: String?]()
+        fields.forEach { fieldAttrs[$0.attrKey] = $0.attrValue }
+
+        return fieldAttrs
     }
 
     var timeEntryTextFields: [TimeEntryTextField] {

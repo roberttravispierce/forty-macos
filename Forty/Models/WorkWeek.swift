@@ -53,7 +53,19 @@ class WorkWeek {
         delegate.didFetch()
     }
 
-    func updateWeek(workDay: WorkDay) {
+    func updateDay(index: Int, attrs: [String: String?]) {
+        guard let adjustHours = attrs[.adjustHours],
+            let inTime = attrs[.inTime],
+            let outTime = attrs[.outTime],
+            let ptoHours = attrs[.ptoHours]
+            else { fatalError() }
+
+        var workDay = workDays[index]
+        workDay.adjustHours = adjustHours
+        workDay.inTime = inTime
+        workDay.ptoHours = ptoHours
+        workDay.outTime = outTime
+
         Router.hit(.updateWorkDay(workDay: workDay))
     }
 }
