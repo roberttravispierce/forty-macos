@@ -74,7 +74,7 @@ class TotalHoursTests: XCTestCase {
 
         let totalHours = TotalHours.daily(workDay: workDay)
 
-        XCTAssertEqual(totalHours.asString, "0:00")
+        XCTAssertEqual(totalHours.asString, "-4:00")
     }
 
     func testPTO() {

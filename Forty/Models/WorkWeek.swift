@@ -79,6 +79,23 @@ class WorkWeek {
         let dailyTotals = workDays.map { TotalHours.daily(workDay: $0).asString }
         return TotalHours.weekly(dailyTotals: dailyTotals).asString
     }
+
+    func pace(date: Date) -> String {
+        let relativeTo = date > friday ? friday : date
+
+        let dailyTotals = workDays.map { TotalHours.daily(workDay: $0).asString }
+        let grandTotalHours = TotalHours.weekly(dailyTotals: dailyTotals)
+
+        let paceTarget = relativeTo.workWeekDay * 8
+
+        let diff = grandTotalHours - Hours(hours: paceTarget, minutes: 0)
+
+        if diff.asString == Hours.zero.asString {
+            return "even"
+        } else {
+            return diff.asString
+        }
+    }
 }
 
 private extension Calendar {
@@ -109,5 +126,9 @@ private extension Date {
 
     var nextWeek: Date {
         return addingTimeInterval(Date.secondsInWeek)
+    }
+
+    var workWeekDay: Int {
+        return Calendar.current.component(.weekday, from: self) - 1
     }
 }

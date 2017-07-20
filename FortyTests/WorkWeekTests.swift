@@ -47,4 +47,56 @@ class WorkWeekTests: XCTestCase {
         let week = WorkWeek(delegate: MockWorkWeekDelegate(), date: date)
         XCTAssertEqual(week.nextWeek.asString, WorkWeek(delegate: MockWorkWeekDelegate(), date: nextWeekDate).asString)
     }
+
+    func testUnderPace() {
+        let monday = dateFromString(string: "2017-01-02")
+        let week = WorkWeek(delegate: MockWorkWeekDelegate(), date: monday)
+        XCTAssertEqual(week.pace(date: monday), "-8:00")
+    }
+
+    func testEvenPace() {
+        let monday = dateFromString(string: "2017-01-02")
+        let workDay = WorkDay(id: 1, date: Date(), adjustHours: nil, inTime: nil, outTime: nil, ptoHours: "8:00")
+        let week = WorkWeek(delegate: MockWorkWeekDelegate(), date: monday)
+        week.workDays.append(workDay)
+        XCTAssertEqual(week.pace(date: monday), "even")
+    }
+
+    func testOverPace() {
+        let monday = dateFromString(string: "2017-01-02")
+        let workDay = WorkDay(id: 1, date: Date(), adjustHours: nil, inTime: "8:00", outTime: "17:00", ptoHours: nil)
+        let week = WorkWeek(delegate: MockWorkWeekDelegate(), date: monday)
+        week.workDays.append(workDay)
+        XCTAssertEqual(week.pace(date: monday), "1:00")
+    }
+
+    func testEvenPaceWithFullWeek() {
+        let friday = dateFromString(string: "2017-01-06")
+        let workDays = [
+            WorkDay(id: 1, date: Date(), adjustHours: nil, inTime: "9:00", outTime: "17:00", ptoHours: nil),
+            WorkDay(id: 2, date: Date(), adjustHours: nil, inTime: "9:00", outTime: "17:00", ptoHours: nil),
+            WorkDay(id: 3, date: Date(), adjustHours: nil, inTime: "9:00", outTime: "17:00", ptoHours: nil),
+            WorkDay(id: 4, date: Date(), adjustHours: nil, inTime: "9:00", outTime: "17:00", ptoHours: nil),
+            WorkDay(id: 5, date: Date(), adjustHours: nil, inTime: "9:00", outTime: "17:00", ptoHours: nil)
+            ]
+        let week = WorkWeek(delegate: MockWorkWeekDelegate(), date: friday)
+        week.workDays = workDays
+        XCTAssertEqual(week.pace(date: friday), "even")
+    }
+
+    func testEvenPaceWithWeekInPast() {
+        let friday = dateFromString(string: "2017-01-06")
+        let workDays = [
+            WorkDay(id: 1, date: Date(), adjustHours: nil, inTime: "9:00", outTime: "17:00", ptoHours: nil),
+            WorkDay(id: 2, date: Date(), adjustHours: nil, inTime: "9:00", outTime: "17:00", ptoHours: nil),
+            WorkDay(id: 3, date: Date(), adjustHours: nil, inTime: "9:00", outTime: "17:00", ptoHours: nil),
+            WorkDay(id: 4, date: Date(), adjustHours: nil, inTime: "9:00", outTime: "17:00", ptoHours: nil),
+            WorkDay(id: 5, date: Date(), adjustHours: nil, inTime: "9:00", outTime: "17:00", ptoHours: nil)
+        ]
+        let week = WorkWeek(delegate: MockWorkWeekDelegate(), date: friday)
+        week.workDays = workDays
+        let omg = dateFromString(string: "2017-01-10")
+        XCTAssertGreaterThan(omg, friday)
+        XCTAssertEqual(week.pace(date: omg), "even")
+    }
 }

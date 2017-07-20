@@ -14,6 +14,7 @@ class ViewController: NSViewController {
     }
 
     @IBOutlet weak var grandTotalTextField: NSTextField!
+    @IBOutlet weak var paceTextField: NSTextField!
     @IBOutlet weak var weekRangeTextField: NSTextField!
     @IBOutlet weak var horizontalStackView: NSStackView!
 
@@ -48,6 +49,7 @@ class ViewController: NSViewController {
 
         dayStack.totalTextField.stringValue = workWeek.dayTotal(index: index)
         grandTotalTextField.stringValue = workWeek.grandTotal()
+        paceTextField.stringValue = workWeek.pace(date: Date())
     }
 
     private func updateWorkDay(control: NSControl) {

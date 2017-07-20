@@ -712,7 +712,7 @@
                                 <rect key="frame" x="100" y="50" width="400" height="300"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7Bz-9c-1iY">
-                                        <rect key="frame" x="-2" y="228" width="130" height="72"/>
+                                        <rect key="frame" x="-2" y="228" width="129" height="72"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0:00" id="bqh-2n-7kp">
                                             <font key="font" metaFont="system" size="60"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -781,7 +781,7 @@
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9ZH-ZF-oVV">
                                                         <rect key="frame" x="-2" y="180" width="74" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Monday" id="XXq-Xm-Aag">
-                                                            <font key="font" metaFont="system" size="12"/>
+                                                            <font key="font" metaFont="cellTitle"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -860,7 +860,7 @@
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Lv-am-41l">
                                                         <rect key="frame" x="-2" y="180" width="74" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Tuesday" id="6Vd-CH-Jvj">
-                                                            <font key="font" metaFont="system" size="12"/>
+                                                            <font key="font" metaFont="cellTitle"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -939,7 +939,7 @@
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lai-Hb-Bn8">
                                                         <rect key="frame" x="-2" y="180" width="74" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Wednesday" id="YvY-TV-yKO">
-                                                            <font key="font" metaFont="system" size="12"/>
+                                                            <font key="font" metaFont="cellTitle"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -1018,7 +1018,7 @@
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q6S-wY-Xa6">
                                                         <rect key="frame" x="-2" y="180" width="74" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Thursday" id="xkt-KA-Weu">
-                                                            <font key="font" metaFont="system" size="12"/>
+                                                            <font key="font" metaFont="cellTitle"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -1097,7 +1097,7 @@
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="igr-V0-QEw">
                                                         <rect key="frame" x="-2" y="180" width="74" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Friday" id="Mf0-6C-Iv0">
-                                                            <font key="font" metaFont="system" size="12"/>
+                                                            <font key="font" metaFont="cellTitle"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -1190,7 +1190,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-Xz-Eq4">
-                                        <rect key="frame" x="124" y="238" width="33" height="17"/>
+                                        <rect key="frame" x="123" y="238" width="33" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="even" id="8pN-3n-gc8">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1223,6 +1223,7 @@
                     <connections>
                         <outlet property="grandTotalTextField" destination="7Bz-9c-1iY" id="kEe-Na-tL9"/>
                         <outlet property="horizontalStackView" destination="ecR-2F-2IM" id="XeM-KL-gMk"/>
+                        <outlet property="paceTextField" destination="x8J-Xz-Eq4" id="Mhg-3T-L5H"/>
                         <outlet property="weekRangeTextField" destination="JId-1L-m6j" id="hjq-gb-WS6"/>
                     </connections>
                 </viewController>

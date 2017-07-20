@@ -27,7 +27,6 @@ func -(lhs: Hours, rhs: Hours) -> Hours {
         else { return lhs.isValid ? lhs : Hours.zero }
 
     var hours = lhsHours - rhsHours
-    guard hours > 0 else { return Hours.zero }
 
     var minutes = lhsMinutes - rhsMinutes
 
