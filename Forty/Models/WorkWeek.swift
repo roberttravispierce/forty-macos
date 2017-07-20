@@ -67,6 +67,7 @@ class WorkWeek {
         workDay.outTime = outTime
 
         Router.hit(.updateWorkDay(workDay: workDay))
+        workDays[index] = workDay
     }
 
     func dayTotal(index: Int) -> String {
