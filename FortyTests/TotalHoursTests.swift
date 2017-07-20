@@ -14,7 +14,7 @@ class TotalHoursTests: XCTestCase {
 
         let totalHours = TotalHours.daily(workDay: workDay)
 
-        XCTAssertEqual(totalHours, "8:00")
+        XCTAssertEqual(totalHours.asString, "8:00")
     }
 
     func testEarlyOut() {
@@ -29,7 +29,7 @@ class TotalHoursTests: XCTestCase {
 
         let totalHours = TotalHours.daily(workDay: workDay)
 
-        XCTAssertEqual(totalHours, "2:00")
+        XCTAssertEqual(totalHours.asString, "2:00")
     }
 
     func testLateIn() {
@@ -44,7 +44,7 @@ class TotalHoursTests: XCTestCase {
 
         let totalHours = TotalHours.daily(workDay: workDay)
 
-        XCTAssertEqual(totalHours, "2:00")
+        XCTAssertEqual(totalHours.asString, "2:00")
     }
 
     func testInvalidTimes() {
@@ -59,7 +59,7 @@ class TotalHoursTests: XCTestCase {
 
         let totalHours = TotalHours.daily(workDay: workDay)
 
-        XCTAssertEqual(totalHours, "0:00")
+        XCTAssertEqual(totalHours.asString, "0:00")
     }
 
     func testInvalidOut() {
@@ -74,7 +74,7 @@ class TotalHoursTests: XCTestCase {
 
         let totalHours = TotalHours.daily(workDay: workDay)
 
-        XCTAssertEqual(totalHours, "0:00")
+        XCTAssertEqual(totalHours.asString, "0:00")
     }
 
     func testPTO() {
@@ -89,7 +89,7 @@ class TotalHoursTests: XCTestCase {
 
         let totalHours = TotalHours.daily(workDay: workDay)
 
-        XCTAssertEqual(totalHours, "8:00")
+        XCTAssertEqual(totalHours.asString, "8:00")
     }
 
     func testAdjustment() {
@@ -104,7 +104,7 @@ class TotalHoursTests: XCTestCase {
 
         let totalHours = TotalHours.daily(workDay: workDay)
 
-        XCTAssertEqual(totalHours, "8:00")
+        XCTAssertEqual(totalHours.asString, "8:00")
     }
 
     func testExtraMinutes() {
@@ -119,7 +119,7 @@ class TotalHoursTests: XCTestCase {
 
         let totalHours = TotalHours.daily(workDay: workDay)
 
-        XCTAssertEqual(totalHours, "9:00")
+        XCTAssertEqual(totalHours.asString, "9:00")
     }
 
     func testNegativeMinutes() {
@@ -134,7 +134,7 @@ class TotalHoursTests: XCTestCase {
 
         let totalHours = TotalHours.daily(workDay: workDay)
 
-        XCTAssertEqual(totalHours, "7:30")
+        XCTAssertEqual(totalHours.asString, "7:30")
     }
 
     func testVacationDay() {
@@ -149,6 +149,6 @@ class TotalHoursTests: XCTestCase {
 
         let totalHours = TotalHours.daily(workDay: workDay)
 
-        XCTAssertEqual(totalHours, "8:00")
+        XCTAssertEqual(totalHours.asString, "8:00")
     }
 }

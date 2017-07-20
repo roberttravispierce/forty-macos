@@ -72,12 +72,12 @@ class WorkWeek {
 
     func dayTotal(index: Int) -> String {
         let workDay = workDays[index]
-        return TotalHours.daily(workDay: workDay)
+        return TotalHours.daily(workDay: workDay).asString
     }
 
     func grandTotal() -> String {
-        let dailyTotals = workDays.map { TotalHours.daily(workDay: $0) }
-        return TotalHours.weekly(dailyTotals: dailyTotals)
+        let dailyTotals = workDays.map { TotalHours.daily(workDay: $0).asString }
+        return TotalHours.weekly(dailyTotals: dailyTotals).asString
     }
 }
 

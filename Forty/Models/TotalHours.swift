@@ -1,7 +1,7 @@
 import Foundation
 
 struct TotalHours {
-    static func daily(workDay: WorkDay) -> String {
+    static func daily(workDay: WorkDay) -> Hours {
         let inTime = Time(string: workDay.inTime)
         let outTime = Time(string: workDay.outTime)
         let ptoHours = Hours(string: workDay.ptoHours)
@@ -9,10 +9,10 @@ struct TotalHours {
 
         let workedHours = outTime - inTime
         let totalHours = workedHours + ptoHours - adjustHours
-        return totalHours.asString
+        return totalHours
     }
 
-    static func weekly(dailyTotals: [String]) -> String {
-        return dailyTotals.map(Hours.init).reduce(Hours.zero, +).asString
+    static func weekly(dailyTotals: [String]) -> Hours {
+        return dailyTotals.map(Hours.init).reduce(Hours.zero, +)
     }
 }
