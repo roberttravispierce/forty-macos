@@ -62,6 +62,7 @@ class ViewController: NSViewController {
             else { fatalError() }
 
         workWeek.updateDay(index: index, attrs: dayStack.attrs)
+        networkActivityIndicator.activity = true
     }
 
     private func drawWorkWeek() {
@@ -78,6 +79,12 @@ extension ViewController: WorkWeekDelegate {
         DispatchQueue.main.async {
             self.networkActivityIndicator.activity = false
             self.drawWorkWeek()
+        }
+    }
+
+    func didUpdate() {
+        DispatchQueue.main.async {
+            self.networkActivityIndicator.activity = false
         }
     }
 }

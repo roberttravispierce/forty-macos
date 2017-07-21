@@ -2,6 +2,7 @@ import Cocoa
 
 protocol WorkWeekDelegate {
     func didFetch()
+    func didUpdate()
 }
 
 class WorkWeek {
@@ -66,8 +67,12 @@ class WorkWeek {
         workDay.ptoHours = ptoHours
         workDay.outTime = outTime
 
-        Router.hit(.updateWorkDay(workDay: workDay))
+        Router.hit(.updateWorkDay(workDay: workDay), handler: handleUpdateResponse)
         workDays[index] = workDay
+    }
+
+    func handleUpdateResponse(data: Data?, response: URLResponse?, error: Error?) {
+        delegate.didUpdate()
     }
 
     func dayTotal(index: Int) -> String {

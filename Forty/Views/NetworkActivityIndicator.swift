@@ -3,7 +3,7 @@ import Cocoa
 class NetworkActivityIndicator: NSBox {
     var activity = false {
         didSet {
-            if activity {
+            if activity == true && oldValue == false {
                 animateDown()
             }
         }
