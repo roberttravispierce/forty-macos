@@ -2,7 +2,10 @@ import Cocoa
 
 class ViewController: NSViewController {
     private var workWeek: WorkWeek! {
-        didSet { workWeek.fetch() }
+        didSet {
+            workWeek.fetch()
+            networkActivityIndicator.activity = true
+        }
     }
 
     private var dayStacks: [DayStack] {
@@ -13,6 +16,7 @@ class ViewController: NSViewController {
         return dayStacks.flatMap { $0.timeEntryTextFields }
     }
 
+    @IBOutlet weak var networkActivityIndicator: NetworkActivityIndicator!
     @IBOutlet weak var grandTotalTextField: NSTextField!
     @IBOutlet weak var paceTextField: NSTextField!
     @IBOutlet weak var weekRangeTextField: NSTextField!
@@ -71,7 +75,10 @@ class ViewController: NSViewController {
 
 extension ViewController: WorkWeekDelegate {
     func didFetch() {
-        DispatchQueue.main.async { self.drawWorkWeek() }
+        DispatchQueue.main.async {
+            self.networkActivityIndicator.activity = false
+            self.drawWorkWeek()
+        }
     }
 }
 

@@ -736,6 +736,24 @@
                                 <view key="contentView" id="4Ee-JK-wyK">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box boxType="custom" borderType="none" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="3EP-gr-ZJQ" customClass="NetworkActivityIndicator" customModule="Forty" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="360" width="600" height="0.0"/>
+                                            <view key="contentView" id="Jct-Jd-Yxt">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <constraints>
+                                                <constraint firstAttribute="height" id="Ehf-I3-MVw"/>
+                                            </constraints>
+                                            <color key="fillColor" red="0.159081627" green="1" blue="0.44408679010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </box>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3EP-gr-ZJQ" firstAttribute="leading" secondItem="4Ee-JK-wyK" secondAttribute="leading" id="7CQ-qa-0FP"/>
+                                        <constraint firstAttribute="trailing" secondItem="3EP-gr-ZJQ" secondAttribute="trailing" id="9PF-fI-tew"/>
+                                        <constraint firstItem="3EP-gr-ZJQ" firstAttribute="top" secondItem="4Ee-JK-wyK" secondAttribute="top" constant="40" id="BGs-Hv-Y6t"/>
+                                    </constraints>
                                 </view>
                                 <color key="fillColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </box>
@@ -1258,6 +1276,7 @@
                     <connections>
                         <outlet property="grandTotalTextField" destination="7Bz-9c-1iY" id="kEe-Na-tL9"/>
                         <outlet property="horizontalStackView" destination="ecR-2F-2IM" id="XeM-KL-gMk"/>
+                        <outlet property="networkActivityIndicator" destination="3EP-gr-ZJQ" id="PQj-7h-Q9o"/>
                         <outlet property="paceTextField" destination="x8J-Xz-Eq4" id="Mhg-3T-L5H"/>
                         <outlet property="weekRangeTextField" destination="JId-1L-m6j" id="hjq-gb-WS6"/>
                     </connections>
